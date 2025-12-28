@@ -1,11 +1,25 @@
 name: ethanvdh
 
 services:
+  registry:
+    image: registry:3
+    environment:
+      OTEL_TRACES_EXPORTER: none
+      REGISTRY_LOG_LEVEL: warn
+    volumes:
+      - registry-data:/var/lib/registry
+    labels:
+      ofelia.enabled: "true"
+      ofelia.job-exec.datecron.schedule: "@every 6h"
+      ofelia.job-exec.datecron.command: "/bin/registry garbage-collect /etc/distribution/config.yml -m -q"
+
   proxy:
     build:
       context: ./nginx
       dockerfile: ./Dockerfile
     image: proxy
+    depends_on:
+      - registry
     ports:
       - name: http
         target: 80
@@ -18,8 +32,12 @@ services:
       - NGINX_CONFIG=${NGINX_CONFIG}
     volumes:
       - type: bind
-        source: /etc/letsencrypt
+        source: ./letsencrypt
         target: /etc/letsencrypt
+      - type: bind
+        source: nginx.htpasswd
+        target: /etc/nginx/conf.d/nginx.htpasswd
+        read_only: true
     labels:
       ofelia.enabled: "true"
       ofelia.job-exec.datecron.schedule: "@every 12h"
@@ -32,3 +50,6 @@ services:
     command: daemon --docker -f label=com.docker.compose.project=${COMPOSE_PROJECT_NAME}
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock:ro
+
+volumes:
+  registry-data:
