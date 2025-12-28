@@ -1,0 +1,34 @@
+name: ethanvdh
+
+services:
+  proxy:
+    build:
+      context: ./nginx
+      dockerfile: ./Dockerfile
+    image: proxy
+    ports:
+      - name: http
+        target: 80
+        published: 80
+      - name: https
+        target: 443
+        published: 443
+    environment:
+      - DOMAIN=${DOMAIN}
+      - NGINX_CONFIG=${NGINX_CONFIG}
+    volumes:
+      - type: bind
+        source: /etc/letsencrypt
+        target: /etc/letsencrypt
+    labels:
+      ofelia.enabled: "true"
+      ofelia.job-exec.datecron.schedule: "@every 12h"
+      ofelia.job-exec.datecron.command: "/usr/bin/certbot renew --quiet"
+
+  ofelia:
+    image: mcuadros/ofelia:latest
+    depends_on:
+      - proxy
+    command: daemon --docker -f label=com.docker.compose.project=${COMPOSE_PROJECT_NAME}
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro

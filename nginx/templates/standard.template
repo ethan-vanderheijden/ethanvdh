@@ -1,0 +1,28 @@
+server {
+    listen 443 ssl;
+    listen [::]:443 ssl ipv6only=on;
+
+    ssl_certificate /etc/letsencrypt/live/${DOMAIN}/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/${DOMAIN}/privkey.pem;
+    include /etc/letsencrypt/options-ssl-nginx.conf;
+    ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem;
+
+    server_name ${DOMAIN};
+
+    location / {
+        add_header Content-Type text/plain;
+        return 200 "Serving over HTTPS!\n";
+    }
+}
+
+server {
+    if ($host = ${DOMAIN}) {
+        return 301 https://$host$request_uri;
+    }
+
+    listen 80 ;
+    listen [::]:80 ;
+    server_name ${DOMAIN};
+
+    return 404;
+}
