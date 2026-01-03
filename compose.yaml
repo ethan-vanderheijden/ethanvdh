@@ -8,7 +8,9 @@ services:
       OTEL_TRACES_EXPORTER: none
       REGISTRY_LOG_LEVEL: warn
     volumes:
-      - registry-data:/var/lib/registry
+      - type: bind
+        source: ${REGISTRY_DIR}
+        target: /var/lib/registry
     labels:
       ofelia.enabled: "true"
       ofelia.job-exec.datecron.schedule: "@every 6h"
@@ -53,6 +55,3 @@ services:
     command: daemon --docker -f label=com.docker.compose.project=${COMPOSE_PROJECT_NAME}
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock:ro
-
-volumes:
-  registry-data:
