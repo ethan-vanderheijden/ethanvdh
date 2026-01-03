@@ -37,6 +37,15 @@ server {
     client_max_body_size 0;
     chunked_transfer_encoding on;
 
+    proxy_buffering off;
+    proxy_buffer_size 64k;
+    proxy_buffers 24 4k;
+    proxy_busy_buffers_size 64k;
+
+    proxy_http_version 1.1;
+    client_body_buffer_size 64k;
+    proxy_request_buffering off;
+
     location /v2/ {
         if ($http_user_agent ~ "^(docker\/1\.(3|4|5(?!\.[0-9]-dev))|Go ).*$" ) {
             return 404;
