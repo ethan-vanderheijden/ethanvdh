@@ -1,0 +1,26 @@
+{
+  "name": "site",
+  "version": "1.0.0",
+  "description": "Personal website at ethanvdh.com",
+  "homepage": "https://github.com/ethan-vanderheijden/ethanvdh#readme",
+  "bugs": {
+    "url": "https://github.com/ethan-vanderheijden/ethanvdh/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ethan-vanderheijden/ethanvdh.git"
+  },
+  "license": "ISC",
+  "author": "Ethan Van Der Heijden",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build": "webpack --mode production",
+    "build-dev": "webpack --mode development -d eval-cheap-module-source-map --progress --stats-error-details"
+  },
+  "devDependencies": {
+    "html-webpack-plugin": "^5.6.5",
+    "webpack": "^5.104.1",
+    "webpack-cli": "^6.0.1"
+  }
+}

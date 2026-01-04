@@ -1,2 +1,6 @@
 letsencrypt/
+
 nginx.htpasswd
+
+site/dist/
+site/node_modules/

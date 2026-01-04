@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="300mm"
+   height="300mm"
+   viewBox="0 0 300 300"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.4.3 (0d15f75042, 2025-12-25)"
+   sodipodi:docname="favicon.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showguides="true"
+     inkscape:zoom="0.04"
+     inkscape:cx="-1050"
+     inkscape:cy="-850"
+     inkscape:window-width="1582"
+     inkscape:window-height="839"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg1" />
+  <defs
+     id="defs1">
+    <inkscape:path-effect
+       effect="fillet_chamfer"
+       id="path-effect3"
+       is_visible="true"
+       lpeversion="1"
+       nodesatellites_param="F,0,0,1,0,26.878147,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,27.034834,0,1"
+       radius="0"
+       unit="px"
+       method="auto"
+       mode="F"
+       chamfer_steps="1"
+       flexible="false"
+       use_knot_distance="true"
+       apply_no_radius="true"
+       apply_with_radius="true"
+       only_selected="false"
+       hide_knots="false" />
+    <inkscape:path-effect
+       effect="fillet_chamfer"
+       id="path-effect2"
+       is_visible="true"
+       lpeversion="1"
+       nodesatellites_param="F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1"
+       radius="0"
+       unit="px"
+       method="auto"
+       mode="F"
+       chamfer_steps="1"
+       flexible="false"
+       use_knot_distance="true"
+       apply_no_radius="true"
+       apply_with_radius="true"
+       only_selected="false"
+       hide_knots="false" />
+    <inkscape:path-effect
+       effect="fillet_chamfer"
+       id="path-effect1"
+       is_visible="true"
+       lpeversion="1"
+       nodesatellites_param="F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1 @ F,0,0,1,0,0,0,1"
+       radius="0"
+       unit="px"
+       method="auto"
+       mode="F"
+       chamfer_steps="1"
+       flexible="false"
+       use_knot_distance="true"
+       apply_no_radius="true"
+       apply_with_radius="true"
+       only_selected="false"
+       hide_knots="false" />
+  </defs>
+  <rect
+     style="fill:#1f1f1f;fill-opacity:1;stroke-width:0.397498;stroke-dasharray:none"
+     id="rect2"
+     width="300"
+     height="300"
+     x="-5.2939559e-23"
+     y="0"
+     ry="0" />
+  <path
+     style="fill:#00e96b;fill-opacity:1;stroke-width:0.307794;stroke-dasharray:none"
+     id="rect1"
+     width="50"
+     height="210"
+     x="50"
+     y="45"
+     sodipodi:type="rect"
+     ry="0"
+     inkscape:path-effect="#path-effect3"
+     d="M 76.878147,45 H 100 V 255 H 77.034834 A 27.034834,27.034834 45 0 1 50,227.96517 V 71.878147 A 26.878147,26.878147 135 0 1 76.878147,45 Z"
+     transform="matrix(1,0,0,0.95238095,0,7.1428571)" />
+  <rect
+     style="fill:#00e96b;fill-opacity:1;stroke-width:0.180224;stroke-dasharray:none"
+     id="rect1-5"
+     width="120"
+     height="30"
+     x="130"
+     y="50"
+     sodipodi:type="rect"
+     ry="9.2156248" />
+  <rect
+     style="fill:#00e96b;fill-opacity:1;stroke-width:0.180224;stroke-dasharray:none"
+     id="rect1-5-2"
+     width="120"
+     height="30"
+     x="130"
+     y="135"
+     sodipodi:type="rect"
+     ry="9.2156248" />
+  <rect
+     style="fill:#00e96b;fill-opacity:1;stroke-width:0.180224;stroke-dasharray:none"
+     id="rect1-5-2-7"
+     width="120"
+     height="30"
+     x="130"
+     y="220"
+     sodipodi:type="rect"
+     ry="9.2156248" />
+</svg>
