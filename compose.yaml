@@ -42,6 +42,10 @@ services:
         source: nginx.htpasswd
         target: /etc/nginx/conf.d/nginx.htpasswd
         read_only: true
+      - type: bind
+        source: ./site/dist
+        target: /ethanvdh
+        read_only: true
     labels:
       ofelia.enabled: "true"
       ofelia.job-exec.datecron.schedule: "@every 12h"

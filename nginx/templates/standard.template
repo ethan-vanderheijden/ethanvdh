@@ -8,10 +8,11 @@ server {
     include /etc/letsencrypt/options-ssl-nginx.conf;
     ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem;
 
+    root /ethanvdh;
+    index index.html index.htm;
 
     location / {
-        add_header Content-Type text/plain;
-        return 200 "Serving over HTTPS!\n";
+        try_files $uri $uri/ =404;
     }
 }
 
